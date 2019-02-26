@@ -1,0 +1,16 @@
+// Place all the styles related to the puzzles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.blink {
+    animation:blinkingText 0.8s infinite;
+}
+
+@keyframes blinkingText{
+    0%{     color: #fff;    }
+    29%{    color: transparent; }
+    30%{    color: transparent; }
+    49%{    color: transparent;  }
+    59%{    color: transparent;  }
+    100%{   color: #fff;    }
+}
