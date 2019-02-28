@@ -1,0 +1,71 @@
+<% content_for :nav do %>
+  <div class="nav-collapse collapse">
+    <ul class="nav">
+      <li class="">
+        <a href="/alscaliefewakfilcs">Level II Menu</a>
+      </li>
+    </ul>
+  </div>
+<% end %>
+
+<div class="bs-docs-example">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Clearance Level</th>
+        <th>XXB Code</th>
+        <th>Last login</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>I</td>
+        <td>HJ001</td>
+        <td><%= Date.today %></td>
+        <td>Approved</td>
+      </tr>
+      <tr class="error" ondblclick="revealCode()">
+        <td>II</td>
+        <td>HL001</td>
+        <td></td>
+        <td>Denied</td>
+      </tr>
+      <tr class="warning">
+        <td>III</td>
+        <td>HX029</td>
+        <td></td>
+        <td>Denied</td>
+      </tr>
+      <tr class="info">
+        <td>IV</td>
+        <td>XX100</td>
+        <td></td>
+        <td>Denied</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div style="display: none" id="code">
+  <pre class="prettyprint linenums">
+  &lt;source code&gt;
+  8 * 8
+  22
+  1 - 2
+  &lt;/source code&gt;
+  </pre>
+</div>
+
+<%= form_tag "/puzzle_2" do %>
+  <%= text_area_tag :passkey, nil, rows: 3 %>
+  <br>
+  <%= submit_tag :submit, class: "btn btn-primary btn-large" %>
+<% end %>
+
+<script>
+  function revealCode() {
+    document.querySelector("#code").style.display = "block";
+  }
+</script>
+
