@@ -15,6 +15,19 @@
     100%{   color: #fff;    }
 }
 
+.blinkred {
+    animation:blinkingTextRed 0.8s infinite;
+}
+
+@keyframes blinkingTextRed{
+    0%{     color: #f7261b;    }
+    29%{    color: transparent; }
+    30%{    color: transparent; }
+    49%{    color: transparent;  }
+    59%{    color: transparent;  }
+    100%{   color: #f7261b;    }
+}
+
 @import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
 
 .denied {

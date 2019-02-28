@@ -14,5 +14,13 @@ Rails.application.routes.draw do
   post '/puzzle_2' => 'puzzles#submit_puzzle_2'
   get '/lfblakjbfdlasjbf' => 'puzzles#success_puzzle_2'
 
+  # 3
+
+  get '/kjabfasdbfasdbfv' => 'puzzles#puzzle_3'
+  post '/puzzle_3' => 'puzzles#submit_puzzle_3'
+
+  # 4
+  get '/asldbfkasfasdbfc' => 'puzzles#puzzle_4'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
